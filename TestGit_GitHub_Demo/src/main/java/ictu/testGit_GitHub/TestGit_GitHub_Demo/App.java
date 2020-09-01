@@ -16,4 +16,10 @@ public class App
     public static int cong(int x, int y) {
     	return x+y;
     }
+    public static int tru(int x, int y) {
+    	return x-y;
+    }
+    public static int nhan(int x, int y) {
+    	return x*y;
+    }
 }
