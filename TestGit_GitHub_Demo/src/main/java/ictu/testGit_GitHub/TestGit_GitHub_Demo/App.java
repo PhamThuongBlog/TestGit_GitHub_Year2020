@@ -22,4 +22,8 @@ public class App
     public static int nhan(int x, int y) {
     	return x*y;
     }
+    public static int chia(int x, int y) {
+    	return x/y;
+    }
+    
 }
