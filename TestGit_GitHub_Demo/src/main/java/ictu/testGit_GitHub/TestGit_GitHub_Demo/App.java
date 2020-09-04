@@ -29,10 +29,11 @@ public class App {
 		System.out.println("Hello World!");
 		int x = 10;
 		int y = 20;
-		System.out.println("Ket qua " + x + " + " + y + " = " + cong(x, y));
+		int z=90;
+		System.out.println("Ket qua " + x + " + " + y + " = " + cong(x, y,z));
 	}
 
-	public static int cong(int x, int y) {
-		return x + y;
+	public static int cong(int x, int y, int z) {
+		return x + y+z;
 	}
 }
