@@ -36,4 +36,8 @@ public class App {
 	public static int cong(int x, int y, int z) {
 		return x + y+z;
 	}
+	
+	public static int tru(int x, int y, int z) {
+		return x - y-z;
+	}
 }
