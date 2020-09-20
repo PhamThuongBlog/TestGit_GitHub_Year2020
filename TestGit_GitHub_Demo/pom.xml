@@ -12,6 +12,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -22,4 +25,61 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+               
+               <execution>
+                  <id>id.test</id>
+                  <phase>test</phase>
+                  <goals>
+                     <goal>run</goal>
+                  </goals>
+                  <configuration>
+                     <tasks>
+                        <echo>test phase</echo>
+                     </tasks>
+                  </configuration>
+               </execution>
+            
+               <execution>
+                  <id>id.package</id>
+                  <phase>package</phase>
+                  <goals>
+                     <goal>run</goal>
+                  </goals>
+                  <configuration>
+                     <tasks>
+                        <echo>package phase</echo>
+                     </tasks>
+                     <transformers>
+						<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+						<mainClass>ictu.testGit_GitHub.TestGit_GitHub_Demo.App</mainClass>
+					</transformer>
+					</transformers>
+                     
+                  </configuration>
+               </execution>
+            
+               <execution>
+                  <id>id.deploy</id>
+                  <phase>deploy</phase>
+                  <goals>
+                     <goal>run</goal>
+                  </goals>
+                  <configuration>
+                     <tasks>
+                        <echo>deploy phase</echo>
+                     </tasks>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
 </project>
