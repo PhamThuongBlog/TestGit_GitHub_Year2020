@@ -7,7 +7,10 @@ public class App {
 
 	
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
+		message();
+	}
+	public static void message() {
+		System.out.println("Welcome to this class!!!");
 	}
 
 }
